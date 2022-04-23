@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
@@ -14,60 +14,60 @@ body {
 .container {
   position: relative;
   overflow: hidden;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
 }
 
 .sidebar {
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
   height: 100%;
   width: 35%;
-  position: absolute;
-  top: 0;
   left: 0;
-  transition: transform 0.5s ease-in-out;
+  top: 0;
 }
 
 .sidebar > div {
-  height: 100%;
-  width: 100%;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  display: flex;
   color: #fff;
+  height: 100%;
+  width: 100%;
 }
 
 .sidebar h1 {
-  font-size: 40px;
   margin-bottom: 10px;
-  margin-top: -30px;
   text-align: center;
+  margin-top: -30px;
+  font-size: 40px;
 }
 
 .main-slide {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 35%;
-  width: 65%;
   transition: transform 0.5s ease-in-out;
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  left: 35%;
+  top: 0;
 }
 
 .main-slide > div {
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
   height: 100%;
   width: 100%;
 }
 
 button {
   background-color: #fff;
-  border: none;
-  color: #aaa;
   cursor: pointer;
   font-size: 16px;
   padding: 15px;
+  border: none;
+  color: #aaa;
 }
 
 button:hover {
@@ -80,19 +80,19 @@ button:focus {
 
 .container .controls button {
   position: absolute;
+  z-index: 100;
   left: 35%;
   top: 50%;
-  z-index: 100;
 }
 
 .container .controls .down-button {
+  border-bottom-left-radius: 5px;
   transform: translateX(-100%);
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .container .controls .up-button {
-  transform: translateY(-100%);
-  border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translateY(-100%);
 }
